@@ -640,89 +640,89 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('resize', resizeCanvas);
 
         // Define skill nodes with better colors and bigger sizes
-       const skills = [
-    // 🟦 Frontend Skills – Blue Tones
-    {
-        name: 'HTML', level: 90, category: 'frontend',
-        color: '#4FC3F7', bgColor: '#0288D1', x: 0, y: 0, size: 35,
-        description: 'Semantic HTML5, accessibility focused markup'
-    },
-    {
-        name: 'CSS', level: 85, category: 'frontend',
-        color: '#29B6F6', bgColor: '#0277BD', x: 0, y: 0, size: 32,
-        description: 'Advanced styling, animations, and responsive design'
-    },
-    {
-        name: 'JavaScript', level: 80, category: 'frontend',
-        color: '#5C6BC0', bgColor: '#3949AB', x: 0, y: 0, size: 40,
-        description: 'ES6+, DOM manipulation, async programming'
-    },
-    {
-        name: 'React', level: 75, category: 'frontend',
-        color: '#42A5F5', bgColor: '#1E88E5', x: 0, y: 0, size: 38,
-        description: 'Component architecture, hooks, and state management'
-    },
+        const skills = [
+            // 🟦 Frontend Skills – Blue Tones
+            {
+                name: 'HTML', level: 90, category: 'frontend',
+                color: '#4FC3F7', bgColor: '#0288D1', x: 0, y: 0, size: 35,
+                description: 'Semantic HTML5, accessibility focused markup'
+            },
+            {
+                name: 'CSS', level: 85, category: 'frontend',
+                color: '#29B6F6', bgColor: '#0277BD', x: 0, y: 0, size: 32,
+                description: 'Advanced styling, animations, and responsive design'
+            },
+            {
+                name: 'JavaScript', level: 80, category: 'frontend',
+                color: '#5C6BC0', bgColor: '#3949AB', x: 0, y: 0, size: 40,
+                description: 'ES6+, DOM manipulation, async programming'
+            },
+            {
+                name: 'React', level: 75, category: 'frontend',
+                color: '#42A5F5', bgColor: '#1E88E5', x: 0, y: 0, size: 38,
+                description: 'Component architecture, hooks, and state management'
+            },
 
-    // 🟩 Backend Skills – Green Shades
-    {
-        name: 'Node.js', level: 70, category: 'backend',
-        color: '#66BB6A', bgColor: '#388E3C', x: 0, y: 0, size: 36,
-        description: 'Server-side JavaScript, RESTful APIs'
-    },
-    {
-        name: 'Express', level: 65, category: 'backend',
-        color: '#9CCC65', bgColor: '#689F38', x: 0, y: 0, size: 32,
-        description: 'Web application framework for Node.js'
-    },
-    {
-        name: 'MongoDB', level: 65, category: 'backend',
-        color: '#26A69A', bgColor: '#00897B', x: 0, y: 0, size: 32,
-        description: 'NoSQL database integration and schema design'
-    },
+            // 🟩 Backend Skills – Green Shades
+            {
+                name: 'Node.js', level: 70, category: 'backend',
+                color: '#66BB6A', bgColor: '#388E3C', x: 0, y: 0, size: 36,
+                description: 'Server-side JavaScript, RESTful APIs'
+            },
+            {
+                name: 'Express', level: 65, category: 'backend',
+                color: '#9CCC65', bgColor: '#689F38', x: 0, y: 0, size: 32,
+                description: 'Web application framework for Node.js'
+            },
+            {
+                name: 'MongoDB', level: 65, category: 'backend',
+                color: '#26A69A', bgColor: '#00897B', x: 0, y: 0, size: 32,
+                description: 'NoSQL database integration and schema design'
+            },
 
-    // 🟣 Tools – Purple
-    {
-        name: 'Git', level: 75, category: 'tools',
-        color: '#AB47BC', bgColor: '#8E24AA', x: 0, y: 0, size: 34,
-        description: 'Version control, branching strategies, collaborative workflows'
-    },
+            // 🟣 Tools – Purple
+            {
+                name: 'Git', level: 75, category: 'tools',
+                color: '#AB47BC', bgColor: '#8E24AA', x: 0, y: 0, size: 34,
+                description: 'Version control, branching strategies, collaborative workflows'
+            },
 
-    // 🔴 Language – Red/Pink Shades
-    {
-        name: 'Java', level: 70, category: 'language',
-        color: '#EC407A', bgColor: '#D81B60', x: 0, y: 0, size: 32,
-        description: 'Object-oriented programming and application development'
-    },
+            // 🔴 Language – Red/Pink Shades
+            {
+                name: 'Java', level: 70, category: 'language',
+                color: '#EC407A', bgColor: '#D81B60', x: 0, y: 0, size: 32,
+                description: 'Object-oriented programming and application development'
+            },
 
-    // 🧠 AI Tools – Bright and Futuristic
-    {
-        name: 'Copilot', level: 70, category: 'ai-tools',
-        color: '#FFE082', bgColor: '#FFC107', x: 0, y: 0, size: 32,
-        description: 'GitHub Copilot AI pair programmer integration'
-    },
-    {
-        name: 'ChatGPT', level: 85, category: 'ai-tools',
-        color: '#80DEEA', bgColor: '#26C6DA', x: 0, y: 0, size: 36,
-        description: 'AI assistant for code generation and debugging'
-    },
-    {
-        name: 'Cloud Opus 4', level: 60, category: 'ai-tools',
-        color: '#CE93D8', bgColor: '#9C27B0', x: 0, y: 0, size: 30,
-        description: 'OpenAI multimodal cloud model integration'
-    },
+            // 🧠 AI Tools – Bright and Futuristic
+            {
+                name: 'Copilot', level: 70, category: 'ai-tools',
+                color: '#FFE082', bgColor: '#FFC107', x: 0, y: 0, size: 32,
+                description: 'GitHub Copilot AI pair programmer integration'
+            },
+            {
+                name: 'ChatGPT', level: 85, category: 'ai-tools',
+                color: '#80DEEA', bgColor: '#26C6DA', x: 0, y: 0, size: 36,
+                description: 'AI assistant for code generation and debugging'
+            },
+            {
+                name: 'Cloud Opus 4', level: 60, category: 'ai-tools',
+                color: '#CE93D8', bgColor: '#9C27B0', x: 0, y: 0, size: 30,
+                description: 'OpenAI multimodal cloud model integration'
+            },
 
-    // 🟠 Design – Warm Orange Tones
-    {
-        name: 'UI Design', level: 70, category: 'design',
-        color: '#FF7043', bgColor: '#F4511E', x: 0, y: 0, size: 32,
-        description: 'User interface prototyping and modern design principles'
-    },
-    {
-        name: 'Figma', level: 75, category: 'design',
-        color: '#FFAB91', bgColor: '#D84315', x: 0, y: 0, size: 34,
-        description: 'UI/UX design tool for wireframes and prototypes'
-    },
-];
+            // 🟠 Design – Warm Orange Tones
+            {
+                name: 'UI Design', level: 70, category: 'design',
+                color: '#FF7043', bgColor: '#F4511E', x: 0, y: 0, size: 32,
+                description: 'User interface prototyping and modern design principles'
+            },
+            {
+                name: 'Figma', level: 75, category: 'design',
+                color: '#FFAB91', bgColor: '#D84315', x: 0, y: 0, size: 34,
+                description: 'UI/UX design tool for wireframes and prototypes'
+            },
+        ];
 
 
         // Define connections between related skills
@@ -752,8 +752,8 @@ document.addEventListener('DOMContentLoaded', function () {
             { source: 'Cloud Opus 4', target: 'JavaScript', strength: 0.6 },
             { source: 'Cloud Opus 4', target: 'Node.js', strength: 0.5 },
             { source: 'Figma', target: 'UI Design', strength: 0.9 }
-            
-           
+
+
         ];
 
         // Physics simulation variables
