@@ -640,73 +640,90 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('resize', resizeCanvas);
 
         // Define skill nodes with better colors and bigger sizes
-        const skills = [
-            // Frontend Skills - Bright Blue
-            {
-                name: 'HTML', level: 90, category: 'frontend',
-                color: '#4FC3F7', bgColor: '#0288D1', x: 0, y: 0, size: 35,
-                description: 'Semantic HTML5, accessibility focused markup'
-            },
-            {
-                name: 'CSS', level: 85, category: 'frontend',
-                color: '#29B6F6', bgColor: '#0277BD', x: 0, y: 0, size: 32,
-                description: 'Advanced styling, animations, and responsive design'
-            },
-            {
-                name: 'JavaScript', level: 80, category: 'frontend',
-                color: '#5C6BC0', bgColor: '#3949AB', x: 0, y: 0, size: 40,
-                description: 'ES6+, DOM manipulation, async programming'
-            },
-            {
-                name: 'React', level: 75, category: 'frontend',
-                color: '#42A5F5', bgColor: '#1E88E5', x: 0, y: 0, size: 38,
-                description: 'Component architecture, hooks, and state management'
-            },
+       const skills = [
+    // 🟦 Frontend Skills – Blue Tones
+    {
+        name: 'HTML', level: 90, category: 'frontend',
+        color: '#4FC3F7', bgColor: '#0288D1', x: 0, y: 0, size: 35,
+        description: 'Semantic HTML5, accessibility focused markup'
+    },
+    {
+        name: 'CSS', level: 85, category: 'frontend',
+        color: '#29B6F6', bgColor: '#0277BD', x: 0, y: 0, size: 32,
+        description: 'Advanced styling, animations, and responsive design'
+    },
+    {
+        name: 'JavaScript', level: 80, category: 'frontend',
+        color: '#5C6BC0', bgColor: '#3949AB', x: 0, y: 0, size: 40,
+        description: 'ES6+, DOM manipulation, async programming'
+    },
+    {
+        name: 'React', level: 75, category: 'frontend',
+        color: '#42A5F5', bgColor: '#1E88E5', x: 0, y: 0, size: 38,
+        description: 'Component architecture, hooks, and state management'
+    },
 
-            // Backend Skills - Bright Green/Yellow
-            {
-                name: 'Node.js', level: 70, category: 'backend',
-                color: '#66BB6A', bgColor: '#388E3C', x: 0, y: 0, size: 36,
-                description: 'Server-side JavaScript, RESTful APIs'
-            },
-            {
-                name: 'Express', level: 65, category: 'backend',
-                color: '#9CCC65', bgColor: '#689F38', x: 0, y: 0, size: 32,
-                description: 'Web application framework for Node.js'
-            },
-            {
-                name: 'MongoDB', level: 65, category: 'backend',
-                color: '#26A69A', bgColor: '#00897B', x: 0, y: 0, size: 32,
-                description: 'NoSQL database integration and schema design'
-            },
-            {
-                name: 'MySQL', level: 60, category: 'backend',
-                color: '#FFA726', bgColor: '#FB8C00', x: 0, y: 0, size: 30,
-                description: 'Relational database design and querying'
-            },
+    // 🟩 Backend Skills – Green Shades
+    {
+        name: 'Node.js', level: 70, category: 'backend',
+        color: '#66BB6A', bgColor: '#388E3C', x: 0, y: 0, size: 36,
+        description: 'Server-side JavaScript, RESTful APIs'
+    },
+    {
+        name: 'Express', level: 65, category: 'backend',
+        color: '#9CCC65', bgColor: '#689F38', x: 0, y: 0, size: 32,
+        description: 'Web application framework for Node.js'
+    },
+    {
+        name: 'MongoDB', level: 65, category: 'backend',
+        color: '#26A69A', bgColor: '#00897B', x: 0, y: 0, size: 32,
+        description: 'NoSQL database integration and schema design'
+    },
 
-            // Other Skills - Purple/Pink
-            {
-                name: 'Git', level: 75, category: 'tools',
-                color: '#AB47BC', bgColor: '#8E24AA', x: 0, y: 0, size: 34,
-                description: 'Version control, branching strategies, collaborative workflows'
-            },
-            {
-                name: 'Java', level: 70, category: 'language',
-                color: '#EC407A', bgColor: '#D81B60', x: 0, y: 0, size: 32,
-                description: 'Object-oriented programming and application development'
-            },
-            {
-                name: 'C++', level: 65, category: 'language',
-                color: '#7E57C2', bgColor: '#5E35B1', x: 0, y: 0, size: 30,
-                description: 'Low-level programming and algorithm implementation'
-            },
-            {
-                name: 'UI Design', level: 70, category: 'design',
-                color: '#FF7043', bgColor: '#F4511E', x: 0, y: 0, size: 32,
-                description: 'User interface prototyping and modern design principles'
-            },
-        ];
+    // 🟣 Tools – Purple
+    {
+        name: 'Git', level: 75, category: 'tools',
+        color: '#AB47BC', bgColor: '#8E24AA', x: 0, y: 0, size: 34,
+        description: 'Version control, branching strategies, collaborative workflows'
+    },
+
+    // 🔴 Language – Red/Pink Shades
+    {
+        name: 'Java', level: 70, category: 'language',
+        color: '#EC407A', bgColor: '#D81B60', x: 0, y: 0, size: 32,
+        description: 'Object-oriented programming and application development'
+    },
+
+    // 🧠 AI Tools – Bright and Futuristic
+    {
+        name: 'Copilot', level: 70, category: 'ai-tools',
+        color: '#FFE082', bgColor: '#FFC107', x: 0, y: 0, size: 32,
+        description: 'GitHub Copilot AI pair programmer integration'
+    },
+    {
+        name: 'ChatGPT', level: 85, category: 'ai-tools',
+        color: '#80DEEA', bgColor: '#26C6DA', x: 0, y: 0, size: 36,
+        description: 'AI assistant for code generation and debugging'
+    },
+    {
+        name: 'Cloud Opus 4', level: 60, category: 'ai-tools',
+        color: '#CE93D8', bgColor: '#9C27B0', x: 0, y: 0, size: 30,
+        description: 'OpenAI multimodal cloud model integration'
+    },
+
+    // 🟠 Design – Warm Orange Tones
+    {
+        name: 'UI Design', level: 70, category: 'design',
+        color: '#FF7043', bgColor: '#F4511E', x: 0, y: 0, size: 32,
+        description: 'User interface prototyping and modern design principles'
+    },
+    {
+        name: 'Figma', level: 75, category: 'design',
+        color: '#FFAB91', bgColor: '#D84315', x: 0, y: 0, size: 34,
+        description: 'UI/UX design tool for wireframes and prototypes'
+    },
+];
+
 
         // Define connections between related skills
         const connections = [
@@ -717,13 +734,26 @@ document.addEventListener('DOMContentLoaded', function () {
             { source: 'JavaScript', target: 'Node.js', strength: 0.7 },
             { source: 'Node.js', target: 'Express', strength: 0.9 },
             { source: 'Express', target: 'MongoDB', strength: 0.8 },
-            { source: 'Express', target: 'MySQL', strength: 0.7 },
-            { source: 'MongoDB', target: 'MySQL', strength: 0.5 },
+            { source: 'React', target: 'JavaScript', strength: 0.9 },
+            { source: 'React', target: 'UI Design', strength: 0.8 },
+            { source: 'Git', target: 'JavaScript', strength: 0.7 },
+            { source: 'Git', target: 'Node.js', strength: 0.6 },
+            { source: 'Git', target: 'React', strength: 0.5 },
+            { source: 'Java', target: 'Node.js', strength: 0.6 },
+            { source: 'Java', target: 'Express', strength: 0.5 },
             { source: 'JavaScript', target: 'Git', strength: 0.6 },
             { source: 'React', target: 'UI Design', strength: 0.7 },
             { source: 'HTML', target: 'UI Design', strength: 0.6 },
             { source: 'CSS', target: 'UI Design', strength: 0.8 },
-            { source: 'Java', target: 'C++', strength: 0.6 },
+            { source: 'Copilot', target: 'JavaScript', strength: 0.7 },
+            { source: 'Copilot', target: 'React', strength: 0.6 },
+            { source: 'ChatGPT', target: 'JavaScript', strength: 0.8 },
+            { source: 'ChatGPT', target: 'Node.js', strength: 0.7 },
+            { source: 'Cloud Opus 4', target: 'JavaScript', strength: 0.6 },
+            { source: 'Cloud Opus 4', target: 'Node.js', strength: 0.5 },
+            { source: 'Figma', target: 'UI Design', strength: 0.9 }
+            
+           
         ];
 
         // Physics simulation variables
@@ -1154,90 +1184,103 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Projects Section: Digital Terrain
 // Simple Projects Section
-(function() {
+(function () {
     // Project data
     const projectsData = [
-        {
-            id: 1,
-            title: "DubMaster AI",
-            category: "fullstack",
-            description: "An AI-powered platform that automatically dubs videos into multiple languages while preserving the original speaker's voice characteristics.",
-            tech: ["Node.js", "React", "AI/ML"],
-            features: ["Voice cloning", "Multiple languages", "Real-time preview"],
-            github: "https://github.com/Nir-Bhay/DubMaster-AI",
-            demo: "#"
-        },
+
         {
             id: 2,
-            title: "PassMan",
-            category: "fullstack",
-            description: "A secure password manager application that helps users store, generate, and manage their passwords with military-grade encryption.",
-            tech: ["React", "Node.js", "MongoDB"],
-            features: ["AES-256 encryption", "Password generator", "2FA"],
-            github: "https://github.com/Nir-Bhay/PassMan",
-            demo: "#"
-        },
-        {
-            id: 3,
-            title: "MindEasy",
-            category: "fullstack",
-            description: "A mental health platform for students that provides resources, anonymous peer support, and professional guidance to promote wellness on campus.",
-            tech: ["React", "Node.js", "Socket.io"],
-            features: ["Peer support", "Resource library", "Mood tracking"],
-            github: "https://github.com/Nir-Bhay/MindEasy",
-            demo: "#"
-        },
-        {
-            id: 4,
-            title: "JS-Toolbox",
-            category: "tools",
-            description: "A collection of JavaScript utilities including QR code generator, image converter, and text-to-handwriting tool for everyday productivity tasks.",
-            tech: ["JavaScript", "HTML5", "CSS3"],
-            features: ["QR generator", "Image converter", "Text tools"],
-            github: "https://github.com/Nir-Bhay/JS-Toolbox",
-            demo: "#"
-        },
-        {
-            id: 5,
             title: "SeatWise",
             category: "fullstack",
-            description: "An automated system for generating and distributing exam seating arrangements using PDF templates and student data.",
+            description: "A smart seat booking and management system for institutes and event halls with PDF-based seating arrangements.",
             tech: ["Node.js", "Express", "PDF.js"],
-            features: ["Auto arrangement", "PDF generation", "Email system"],
-            github: "https://github.com/Nir-Bhay/SeatWise",
-            demo: "#"
-        },
-        {
-            id: 6,
-            title: "Library Study-Space",
-            category: "frontend",
-            description: "A personalized study-space booking system for university libraries that allows students to reserve desks, meeting rooms, and resources.",
-            tech: ["React", "Firebase"],
-            features: ["Real-time booking", "Floor navigation", "Analytics"],
-            github: "https://github.com/Nir-Bhay/Library-Management",
-            demo: "#"
+            features: ["Dynamic seating", "PDF output", "Student data integration"],
+            github: "https://github.com/Nir-Bhay/Seatwise",
+            demo: "https://nir-bhay.github.io/Seatwise/"
         },
         {
             id: 7,
-            title: "To-Do List App",
-            category: "frontend",
-            description: "A clean, minimalist task management application with persistent storage and productivity features.",
+            title: "Delicious Food Delivery",
+            category: "fullstack",
+            description: "A responsive landing page for a food delivery service with modern design and product showcase.",
             tech: ["HTML", "CSS", "JavaScript"],
-            features: ["Task categories", "Local storage", "Dark mode"],
-            github: "https://github.com/Nir-Bhay/Todo-App",
-            demo: "#"
+            features: ["Product cards", "Responsive layout", "Call-to-action buttons"],
+            github: "https://github.com/Nir-Bhay/Delicious-Food-Delivered-to-Your-Doorstep",
+            demo: "https://delicious-food-delivered-to-your-doorstep.vercel.app/"
         },
         {
-            id: 8,
+            id: 3,
+            title: "Ranjana NGO Website",
+            category: "frontend",
+            description: "A clean, responsive website for a women's empowerment NGO featuring donation and contact modules.",
+            tech: ["HTML", "CSS", "JavaScript"],
+            features: ["Informational sections", "Contact form", "Mobile friendly"],
+            github: "https://github.com/Nir-Bhay/Ranjana-Women-Empowerment-NGO",
+            demo: "https://nir-bhay.github.io/Ranjana-Women-Empowerment-NGO/"
+        },
+        {
+            id: 4,
             title: "Personal Portfolio",
             category: "frontend",
-            description: "This very website! A cutting-edge portfolio showcasing my projects and skills with advanced interactive visualizations.",
-            tech: ["HTML5", "CSS3", "JavaScript"],
-            features: ["Responsive design", "Interactive animations", "Clean UI"],
-            github: "https://github.com/Nir-Bhay/portfolio",
-            demo: "#"
+            description: "My official developer portfolio site showcasing skills, projects, and resume with a responsive modern UI.",
+            tech: ["HTML", "CSS", "JavaScript",],
+            features: ["Project showcase", "Contact section", "Responsive design"],
+            github: "https://github.com/Nir-Bhay/Nirbhay-Hiwse-Personal-Portfolio",
+            demo: "https://nir-bhay.github.io/Nirbhay-Hiwse-Personal-Portfolio/"
+        },
+        {
+            id: 5,
+            title: "3D Solar System Simulator",
+            category: "frontend",
+            description: "An interactive 3D simulation of the solar system built using Three.js, allowing users to explore planets.",
+            tech: ["Three.js", "JavaScript", "WebGL"],
+            features: ["Orbit animation", "Interactive camera", "Space experience"],
+            github: "https://github.com/Nir-Bhay/Interactive-3D-Solar-System-Simulation-0.2",
+            demo: "https://nir-bhay.github.io/Interactive-3D-Solar-System-Simulation-0.2/"
+        },
+        {
+            id: 6,
+            title: "Personal Music Player",
+            category: "frontend",
+            description: "A sleek music player web app that plays tracks with album art and basic media controls.",
+            tech: ["HTML", "CSS", "JavaScript", "Audio API",],
+            features: ["Play/pause", "Next/previous", "Custom UI"],
+            github: "https://github.com/Nir-Bhay/personal-music-player",
+            demo: "https://personal-music-player.vercel.app/"
+        },
+
+        {
+            id: 8,
+            title: "Browser Extension Tools",
+            category: "tools",
+            description: "A custom Chrome extension offering quick access to multiple utilities from the browser toolbar.",
+            tech: ["JavaScript", "HTML", "Manifest V3"],
+            features: ["Quick launch tools", "Minimal UI", "Extension popup"],
+            github: "https://github.com/Nir-Bhay/Browser-EXTENSION",
+            demo: "https://github.com/Nir-Bhay/Browser-EXTENSION/blob/main/README.md"
+        },
+        {
+            id: 9,
+            title: "16 Parchi Game",
+            category: "games",
+            description: "A digital remake of the traditional Indian 16-parchi paper game implemented in the browser.",
+            tech: ["HTML", "CSS", "JavaScript"],
+            features: ["Card picking logic", "Game animations", "Responsive layout"],
+            github: "https://github.com/Nir-Bhay/16-PARCHI-GAME",
+            demo: "https://nir-bhay.github.io/16-PARCHI-GAME/assets/Gameboard.html"
+        },
+        {
+            id: 10,
+            title: "JS Toolbox",
+            category: "tools",
+            description: "A bundle of JS utilities like QR code generator, image converter, and text-to-handwriting features.",
+            tech: ["JavaScript", "HTML", "CSS"],
+            features: ["QR generation", "Image tools", "Text converter"],
+            github: "https://github.com/Nir-Bhay/JS-Toolbox---Find-you-best-tools",
+            demo: "https://nir-bhay.github.io/JS-Toolbox---Find-you-best-tools/"
         }
     ];
+
     // Wait for DOM
     document.addEventListener('DOMContentLoaded', function () {
         initProjects();
@@ -1317,50 +1360,137 @@ document.addEventListener('DOMContentLoaded', function () {
         return card;
     }
 
+    // Update the showModal function
     function showModal(project) {
         const modal = document.getElementById('projectModal');
 
-        // Update modal content
+        // Update modal header
         modal.querySelector('.modal-title').textContent = project.title;
         modal.querySelector('.modal-category').textContent = {
             'frontend': 'Frontend',
             'fullstack': 'Full Stack',
-            'tools': 'Tools'
+            'tools': 'Tools',
+            'games': 'Games'
         }[project.category];
 
+        // Update description
         modal.querySelector('.modal-desc').textContent = project.description;
 
-        // Tech stack
+        // Tech stack with icon
         const techHtml = `
-            <h4>Technologies</h4>
-            <div class="modal-tech-list">
-                ${project.tech.map(t => `<span class="tech-item">${t}</span>`).join('')}
-            </div>
-        `;
+        <h4><i class="fas fa-code"></i> Technologies</h4>
+        <div class="modal-tech-list">
+            ${project.tech.map(t => `<span class="tech-item">${t}</span>`).join('')}
+        </div>
+    `;
         modal.querySelector('.modal-tech').innerHTML = techHtml;
 
-        // Features
+        // Features with icon
         const featuresHtml = `
-            <h4>Key Features</h4>
-            <ul>
-                ${project.features.map(f => `<li>${f}</li>`).join('')}
-            </ul>
-        `;
+        <h4><i class="fas fa-star"></i> Key Features</h4>
+        <ul>
+            ${project.features.map(f => `<li>${f}</li>`).join('')}
+        </ul>
+    `;
         modal.querySelector('.modal-features').innerHTML = featuresHtml;
 
-        // Links
+        // Update links
         modal.querySelector('.demo-btn').href = project.demo;
         modal.querySelector('.github-btn').href = project.github;
+
+        // Handle Demo Preview
+        const demoSection = document.querySelector('.modal-demo-section');
+        const demoIframe = document.getElementById('demoIframe');
+        const loadingDiv = demoSection.querySelector('.demo-loading');
+
+        if (project.demo && project.demo !== '#') {
+            demoSection.classList.remove('no-demo');
+            demoIframe.classList.remove('loaded');
+            loadingDiv.style.display = 'block';
+
+            // Reset iframe
+            demoIframe.src = '';
+
+            // Load iframe after a small delay
+            setTimeout(() => {
+                demoIframe.src = project.demo;
+                demoIframe.onload = function () {
+                    demoIframe.classList.add('loaded');
+                    loadingDiv.style.display = 'none';
+                };
+
+                // Handle iframe load errors
+                demoIframe.onerror = function () {
+                    demoSection.classList.add('no-demo');
+                    loadingDiv.style.display = 'none';
+                };
+            }, 100);
+        } else {
+            demoSection.classList.add('no-demo');
+            demoIframe.src = '';
+        }
 
         // Show modal
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const previewToggle = document.getElementById('previewToggle');
+        const demoSection = document.querySelector('.modal-demo-section');
+
+        if (previewToggle) {
+            previewToggle.addEventListener('click', function () {
+                demoSection.classList.toggle('fullscreen');
+                const icon = this.querySelector('i');
+
+                if (demoSection.classList.contains('fullscreen')) {
+                    icon.className = 'fas fa-compress';
+                    // Prevent body scroll when in fullscreen
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    icon.className = 'fas fa-expand';
+                    // Restore body scroll
+                    document.body.style.overflow = 'hidden'; // Still hidden because modal is open
+                }
+            });
+
+            // ESC key to exit fullscreen
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && demoSection.classList.contains('fullscreen')) {
+                    demoSection.classList.remove('fullscreen');
+                    previewToggle.querySelector('i').className = 'fas fa-expand';
+                }
+            });
+        }
+
+        // Initialize projects
+        initProjects();
+    });
+
+
     function closeModal() {
         const modal = document.getElementById('projectModal');
+        const demoIframe = document.getElementById('demoIframe');
+        const demoSection = document.querySelector('.modal-demo-section');
+
+        // Close modal
         modal.classList.remove('active');
         document.body.style.overflow = '';
+
+        // Clean up iframe
+        demoIframe.src = '';
+        demoIframe.classList.remove('loaded');
+
+        // Exit fullscreen if active
+        if (demoSection.classList.contains('fullscreen')) {
+            demoSection.classList.remove('fullscreen');
+            document.getElementById('previewToggle').querySelector('i').className = 'fas fa-expand';
+        }
+
+        // Reset demo section
+        demoSection.classList.remove('no-demo');
     }
 
 })();

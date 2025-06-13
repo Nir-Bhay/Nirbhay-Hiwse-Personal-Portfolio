@@ -64,7 +64,7 @@
             <div class="roles">
                 <span class="role-frontend">Frontend Developer</span> |
                 <span class="role-backend">Backend Engineer</span> |
-                <span class="role-ui">UI Designer</span>
+                <span class="role-ui">Problem Solving via AI</span>
             </div>
         </div>
 
@@ -75,17 +75,18 @@
         </div>
         <div class="stats-banner">
             <div class="stat-item">
-                <div class="stat-number" data-count="34">0</div>
+                <div class="stat-number" data-count="40">0</div>
                 <div class="stat-label"><i class="stat-icon fab fa-github"></i>Repositories</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number" data-count="5">0</div>
                 <div class="stat-label"><i class="stat-icon fas fa-code-branch"></i>Major Projects</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" data-count="6">0</div>
-                <div class="stat-label"><i class="stat-icon fas fa-users"></i>Team Members</div>
-            </div>
+        <div class="stat-item">
+            <div class="stat-number" data-count="4">0</div>
+            <div class="stat-label"><i class="stat-icon fas fa-briefcase"></i>Freelance Projects</div>
+        </div>
+
         </div>
         <div class="cta-container">
             <button class="btn-primary" onclick="downloadResume()">
@@ -203,52 +204,99 @@
 
 
     <!-- Projects Section: Digital Terrain -->
-<section id="projects" class="projects-section">
-    <div class="container">
-        <!-- Section Header -->
-        <div class="section-header">
-            <div class="section-title-container">
-                <span class="section-number">02</span>
-                <h2 class="section-title">Projects</h2>
-            </div>
-            <div class="section-line"></div>
-        </div>
-
-        <!-- Project Filters -->
-        <div class="project-filters">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="frontend">Frontend</button>
-            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-            <button class="filter-btn" data-filter="tools">Tools</button>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="projects-grid" id="projectsGrid">
-            <!-- Projects will be added here -->
-        </div>
-
-        <!-- Simple Modal -->
-        <div class="project-modal" id="projectModal">
-            <div class="modal-backdrop"></div>
-            <div class="modal-box">
-                <button class="modal-close">&times;</button>
-                <h3 class="modal-title"></h3>
-                <div class="modal-category"></div>
-                <div class="modal-body">
-                    <p class="modal-desc"></p>
-                    <div class="modal-tech"></div>
-                    <div class="modal-features"></div>
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="section-title-container">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">Projects</h2>
                 </div>
-                <div class="modal-links">
-                    <a href="#" class="modal-btn demo-btn" target="_blank">View Demo</a>
-                    <a href="#" class="modal-btn github-btn" target="_blank">
-                        <i class="fab fa-github"></i> Code
-                    </a>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="tools">Tools</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be added here -->
+            </div>
+
+            <!-- Simple Modal -->
+            <!-- Update your modal-box structure -->
+            <div class="project-modal" id="projectModal">
+                <div class="modal-backdrop"></div>
+                <div class="modal-box">
+                    <button class="modal-close">&times;</button>
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h3 class="modal-title"></h3>
+                        <div class="modal-category"></div>
+                    </div>
+
+                    <!-- Modal Content Container - Row Layout -->
+                    <div class="modal-content-container">
+                        <!-- Left Side - Live Demo Preview -->
+                        <div class="modal-demo-section">
+                            <div class="demo-preview-header">
+                                <h4><i class="fas fa-desktop"></i> Live Preview</h4>
+                                <button class="preview-toggle" id="previewToggle">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                            <div class="demo-preview-container">
+                                <iframe class="demo-iframe" id="demoIframe" src="" frameborder="0"></iframe>
+                                <div class="demo-loading">
+                                    <div class="loading-spinner"></div>
+                                    <p>Loading preview...</p>
+                                </div>
+                                <div class="demo-unavailable">
+                                    <i class="fas fa-globe"></i>
+                                    <p>Live preview not available</p>
+                                    <small>Click "View Full Demo" below</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side - Project Details -->
+                        <div class="modal-info-section">
+                            <div class="modal-body">
+                                <div class="modal-desc-section">
+                                    <h4><i class="fas fa-info-circle"></i> Description</h4>
+                                    <p class="modal-desc"></p>
+                                </div>
+
+                                <div class="modal-tech">
+                                    <!-- Tech content -->
+                                </div>
+
+                                <div class="modal-features">
+                                    <!-- Features content -->
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="modal-links">
+                                <a href="#" class="modal-btn demo-btn" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View Full Demo
+                                </a>
+                                <a href="#" class="modal-btn github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -262,7 +310,7 @@
                 </div>
                 <div class="section-line"></div>
             </div>
-    
+
             <!-- Tab Navigation -->
             <div class="exp-tabs">
                 <button class="tab-btn active" data-tab="experience">
@@ -274,163 +322,150 @@
                     Certifications
                 </button>
             </div>
-    
+
             <!-- Tab Content -->
             <div class="tab-content">
                 <!-- Experience Tab -->
-                <div class="tab-panel active" id="experience-panel">
-                    <div class="timeline">
-                        <!-- Timeline Line -->
-                        <div class="timeline-line"></div>
-    
-                        <!-- Experience Items -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2023 - Present</div>
-                                <h3 class="timeline-title">Full Stack Developer</h3>
-                                <h4 class="timeline-company">Tech Company Name</h4>
-                                <p class="timeline-description">
-                                    Developed and maintained web applications using React and Node.js.
-                                    Collaborated with cross-functional teams to deliver high-quality solutions.
-                                </p>
-                                <div class="timeline-tech">
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">MongoDB</span>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2022 - 2023</div>
-                                <h3 class="timeline-title">Frontend Developer Intern</h3>
-                                <h4 class="timeline-company">Startup XYZ</h4>
-                                <p class="timeline-description">
-                                    Built responsive user interfaces and implemented modern design patterns.
-                                    Participated in agile development processes and code reviews.
-                                </p>
-                                <div class="timeline-tech">
-                                    <span class="tech-tag">HTML/CSS</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">Vue.js</span>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2021 - 2022</div>
-                                <h3 class="timeline-title">Freelance Web Developer</h3>
-                                <h4 class="timeline-company">Self-Employed</h4>
-                                <p class="timeline-description">
-                                    Designed and developed custom websites for small businesses.
-                                    Managed client relationships and project timelines independently.
-                                </p>
-                                <div class="timeline-tech">
-                                    <span class="tech-tag">WordPress</span>
-                                    <span class="tech-tag">PHP</span>
-                                    <span class="tech-tag">MySQL</span>
-                                </div>
+            <div class="tab-panel active" id="experience-panel">
+                <div class="timeline">
+                    <!-- Timeline Line -->
+                    <div class="timeline-line"></div>
+            
+                    <!-- Experience Items -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Jun 2024 – Present</div>
+                            <h3 class="timeline-title">Software Desgin</h3>
+                            <h4 class="timeline-company">Sage University</h4>
+                            <p class="timeline-description">
+                                Developed an automated exam seat allocation system called <strong>SeatWise</strong> using an
+                                optimized algorithm. Enabled dynamic PDF generation and admin-side configuration for smooth
+                                examination management.
+                            </p>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PDF.js</span>
                             </div>
                         </div>
                     </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Nov 2024 – Mar 2025</div>
+                            <h3 class="timeline-title">Freelance Web Developer</h3>
+                            <h4 class="timeline-company">RealEstate Company</h4>
+                            <p class="timeline-description">
+                                Built a responsive and scalable projcet showcaser website for areal estate company, integrating
+ dealing with over 30,000 products.
+                                Focused on clean UI/UX, product filters, and adaptive performance.
+                            </p>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+            
                 </div>
-    
+            </div>
+
+
                 <!-- Certifications Tab -->
-                <div class="tab-panel" id="certifications-panel">
-                    <div class="cert-grid">
-                        <!-- Certificate Card 1 -->
-                        <div class="cert-card">
-                            <div class="cert-icon">
-                                <i class="fab fa-google"></i>
-                            </div>
-                            <div class="cert-content">
-                                <h3 class="cert-title">Google Cloud Professional</h3>
-                                <p class="cert-issuer">Google Cloud</p>
-                                <p class="cert-date">Issued: March 2023</p>
-                                <div class="cert-skills">
-                                    <span>Cloud Architecture</span>
-                                    <span>DevOps</span>
-                                    <span>Kubernetes</span>
-                                </div>
-                                <a href="#" class="cert-link" target="_blank">
-                                    View Certificate <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+            <div class="tab-panel" id="certifications-panel">
+                <div class="cert-grid">
+                    <!-- Certificate 1: International Conference -->
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
                         </div>
-    
-                        <!-- Certificate Card 2 -->
-                        <div class="cert-card">
-                            <div class="cert-icon">
-                                <i class="fab fa-aws"></i>
+                        <div class="cert-content">
+                            <h3 class="cert-title">Project Presentation – International Conference</h3>
+                            <p class="cert-issuer">Sage University, Bhopal</p>
+                            <p class="cert-date">Issued: March 2023</p>
+                            <div class="cert-skills">
+                                <span>SeatWise System</span>
+                                <span>Innovation</span>
+                                <span>Automation</span>
                             </div>
-                            <div class="cert-content">
-                                <h3 class="cert-title">AWS Solutions Architect</h3>
-                                <p class="cert-issuer">Amazon Web Services</p>
-                                <p class="cert-date">Issued: January 2023</p>
-                                <div class="cert-skills">
-                                    <span>Cloud Computing</span>
-                                    <span>AWS Services</span>
-                                    <span>Architecture</span>
-                                </div>
-                                <a href="#" class="cert-link" target="_blank">
-                                    View Certificate <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                            <a href="#" class="cert-link" target="_blank">
+                                View Certificate <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
-    
-                        <!-- Certificate Card 3 -->
-                        <div class="cert-card">
-                            <div class="cert-icon">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <div class="cert-content">
-                                <h3 class="cert-title">React Developer Certification</h3>
-                                <p class="cert-issuer">Meta</p>
-                                <p class="cert-date">Issued: November 2022</p>
-                                <div class="cert-skills">
-                                    <span>React.js</span>
-                                    <span>Redux</span>
-                                    <span>Hooks</span>
-                                </div>
-                                <a href="#" class="cert-link" target="_blank">
-                                    View Certificate <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                    </div>
+            
+                    <!-- Certificate 2: Sistech Hackathon -->
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-laptop-code"></i>
                         </div>
-    
-                        <!-- Certificate Card 4 -->
-                        <div class="cert-card">
-                            <div class="cert-icon">
-                                <i class="fas fa-graduation-cap"></i>
+                        <div class="cert-content">
+                            <h3 class="cert-title">Hackathon Participation (MindEasy)</h3>
+                            <p class="cert-issuer">Sistech, Bhopal</p>
+                            <p class="cert-date">Issued: Feb 2024</p>
+                            <div class="cert-skills">
+                                <span>Mental Health Platform</span>
+                                <span>React</span>
+                                <span>Hackathon</span>
                             </div>
-                            <div class="cert-content">
-                                <h3 class="cert-title">Full Stack Web Development</h3>
-                                <p class="cert-issuer">Coursera</p>
-                                <p class="cert-date">Issued: August 2022</p>
-                                <div class="cert-skills">
-                                    <span>MERN Stack</span>
-                                    <span>API Design</span>
-                                    <span>Database</span>
-                                </div>
-                                <a href="#" class="cert-link" target="_blank">
-                                    View Certificate <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <a href="#" class="cert-link" target="_blank">
+                                View Certificate <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+            
+                    <!-- Certificate 3: Shark Tank Pitch -->
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h3 class="cert-title">Startup Pitch – Shark Tank</h3>
+                            <p class="cert-issuer">Sage University</p>
+                            <p class="cert-date">Issued: 2024</p>
+                            <div class="cert-skills">
+                                <span>Pitching</span>
+                                <span>Innovation</span>
+                                <span>Entrepreneurship</span>
                             </div>
+                            <a href="#" class="cert-link" target="_blank">
+                                View Certificate <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+            
+                    <!-- Certificate 4: HackerRank JavaScript -->
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h3 class="cert-title">JavaScript (Basic) Certificate</h3>
+                            <p class="cert-issuer">HackerRank</p>
+                            <p class="cert-date">Issued: 2024</p>
+                            <div class="cert-skills">
+                                <span>JavaScript</span>
+                                <span>Logic</span>
+                                <span>Web Development</span>
+                            </div>
+                            <a href="https://www.hackerrank.com/certificates" class="cert-link" target="_blank">
+                                View Certificate <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            </div>
         </div>
     </section>
 
-    
 
- 
+
+
     <!-- Contact Section: Digital Portal -->
     <section id="contact" class="contact-section">
         <div class="portal-container">
